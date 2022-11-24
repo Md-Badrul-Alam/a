@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+    <title>My Account</title>
+</head>
+<body>
+    <h1 class="text-4xl font-bold text-center text-green-500 uppercase p-8">my<span class="text-5xl text-yellow-600">amount</span></h1>
+    <main>
+      <section class="w-5/6 mx-auto">
+        <div class="grid gap-3 grid-cols-3">
+          <div class="bg-purple-400 p-10 text-white rounded-2xl">
+            <h3  class="text-3xl capitalize">deposit</h3>
+            <h2 class="text-4xl font-semibold">$<span id="deposit-total">000</span></h2>
+          </div>
+          <div class="bg-teal-300 p-10 text-white rounded-2xl">
+            <h3 class="text-3xl capitalize">withdraw</h3>
+            <h2 class="text-4xl font-semibold">$<span id="total-withdraw">000</span></h2>
+          </div>
+          <div class="bg-red-400 p-10 text-white rounded-2xl">
+            <h3 class="text-3xl capitalize">belance</h3>
+            <h2 class="text-4xl font-semibold">$<span id="total-balance">000</span></h2>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-5/6 mx-auto grid grid-cols-2 gap-5">
+        
+        <div class="space-y-5 bg-fuchsia-200 p-10 rounded-lg my-10">
+          <h3 class="uppercase text-center text-white text-4xl">deposit</h3>
+  
+          <input id="deposit-input" class="w-3/4 px-3 py-3 rounded-md border-slate-400 border-2 " type="text" placeholder="Enter The Amount" required><br>
+  
+          <button id="deposit-button" class="bg-green-500 py-2 px-7 rounded capitalize text-white">deposit</button>
+        </div>
+
+        <div class="space-y-5 bg-lime-200 p-10 rounded-lg my-10">
+          <h3 class="uppercase text-center text-white text-4xl">withdraw</h3>
+  
+          <input id="withdraw-input" class="w-3/4 px-3 py-3 rounded-md border-slate-400 border-2 " type="text" placeholder="Enter The Amount" required><br>
+          
+          <h3 id="error" class="text-2xl text-red-600"></h3>
+  
+          <button id="withdraw-button" class="bg-green-500 py-2 px-7 rounded capitalize text-white">withdraw</button>
+        </div>
+
+     </section>
+    </main>
+
+ 
+
+   
+
+ <script src="./js/banking.js"></script>
+    
+     
+</body>
+</html>
